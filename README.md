@@ -60,5 +60,12 @@ public class WebAPIFactory<TEntryPoint> : WebApplicationFactory<TEntryPoint> whe
         builder.ConfigureAppConfiguration(c => c.AddUserSecrets(Assembly.GetExecutingAssembly(), true));
     }
 }
-
 ```
+
+---
+**NOTE**
+
+Just do this step if you want to use the same secrets.
+If you want to use different secrets, generate a different guid and add it to the `UserSecretsId` tests project.
+
+---
